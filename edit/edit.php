@@ -1,83 +1,46 @@
 <html>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!--- Navbar --->
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-    <a class="navbar-brand" href="#">
-        <img alt="Brand" src="https://www.seeklogo.net/wp-content/uploads/2011/06/twitter-bird-vector-400x400.png" width = 32; height = 32;>
-        
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Home</a>
-      </div>
-      <div class="col-sm-3 col-md-3 pull-right">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-            <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div></div></form>
-    </div>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+
+<!--navbar-->
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script>
+   <title>CSS MenuMaker</title>
+</head>
+
+<div id='cssmenu'>
+<ul>
+   <li><img src="https://www.seeklogo.net/wp-content/uploads/2011/06/twitter-bird-vector-400x400.png" width = 42; height = 42;><li>
+   <li class='active'><a href='#'>Home</a></li>
+   <li><a href='#'>Explore</a></li>
+   <li><a href='#'>Support</a></li>
+</ul>
+</div>
+<br>
+
 <body>
+
 <!-- Banner and profile picture -->
 <div class="parent">
-    <img src="https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg" alt="Nanalan" class="img-rounded" width="1270" height="300">
+    <img src="https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg" alt="Nanalan" class="container" width="1000" height="128">
     <div class="inner"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png" class="img-thumbnail" alt="Smiley face" width="128" height="128" /></div>
 </div>
-<style>
-.parent{
-    width:170px;
-    height:360px;
-    position:absolute;
-    z-index:0;
-}
 
-.inner{
-    position:absolute;
-    z-index:1;
-    bottom:0;
-    right:0;
-}
-</style>
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <!--- Following Panel --->
-    <div class="row">
-        <div class="col-md-2">
-    <div class="panel panel-primary">
-    <div class="panel-heading">Following</div>
-    <div class="panel-body">...</div>
-    </div></div>
-    <!--- Tweet Panel --->
-        <div class="col-md-6 col-md-offset-1">
-    <div class="panel panel-primary">
-    <div class="panel-heading">Tweets</div>
-    <div class="panel-body">xddddddd</div>
-    </div></div>
-	<!--- Trending Panel --->
-        <div class="col-md-2 col-md-offset-10">
-    <div class="panel panel-primary">
-    <div class="panel-heading">Trending</div>
-    <div class="panel-body">#Bootstrap</div>
-</div></div></div>
+    <br><br><br><br><br><br><br><br><br><br>
 	<?php
 	    // pass in some info;
-		require("common.php"); 
+		require("../common/common.php"); 
 		
 		if(empty($_SESSION['user'])) { 
   
 			// If they are not, we redirect them to the login page. 
-			$location = "http://" . $_SERVER['HTTP_HOST'] . "/login.php";
+			$location = "http://" . $_SERVER['HTTP_HOST'] . "../login/login.php";
 			echo '<META HTTP-EQUIV="refresh" CONTENT="0;URL='.$location.'">';
 			//exit;
          
@@ -88,7 +51,7 @@
 		
 		// To access $_SESSION['user'] values put in an array, show user his username
 		$arr = array_values($_SESSION['user']);
-		echo "Welcome " . $arr[2];
+		echo "<p id='p3'>Welcome, $arr[1]</p>";
 
 		// open connection
 		$connection = mysql_connect($host, $username, $password) or die ("Unable to connect!");
@@ -170,6 +133,6 @@
     	National animal: <input type="text" name="animal">
     	<input type="submit" name="submit">
     </form>
-    <form action="logout.php" method="post"><button>Log out</button></form>
+    <form action="../logout/logout.php" method="post"><button>Log out</button></form>
 	</body>
 </html>
