@@ -67,7 +67,7 @@
         <div class="col-md-6 col-md-offset-1">
     <div class="panel panel-primary">
     <div class="panel-heading">Tweets</div>
-    <div class="panel-body">xddddddd</div>
+    <div class="panel-body">#Bootstrap is amazing</div>
     </div></div>
 	<!--- Trending Panel --->
         <div id="trending" class="col-md-2 col-md-offset-10">
