@@ -48,6 +48,11 @@
     bottom:0;
     right:0;
 }
+#trending {
+	position: absolute;
+	top: 450px;
+	left: -10px;
+}
 </style>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -65,7 +70,7 @@
     <div class="panel-body">xddddddd</div>
     </div></div>
 	<!--- Trending Panel --->
-        <div class="col-md-2 col-md-offset-10">
+        <div id="trending" class="col-md-2 col-md-offset-10">
     <div class="panel panel-primary">
     <div class="panel-heading">Trending</div>
     <div class="panel-body">#Bootstrap</div>
