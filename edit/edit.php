@@ -33,6 +33,49 @@
 </div>
 
     <br><br><br><br><br><br><br><br><br><br>
+
+<style>
+.parent{
+    width:170px;
+    height:360px;
+    position:absolute;
+    z-index:0;
+}
+
+.inner{
+    position:absolute;
+    z-index:1;
+    bottom:0;
+    right:0;
+}
+#trending {
+	position: absolute;
+	top: 450px;
+	left: -10px;
+}
+</style>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!--- Following Panel --->
+    <div class="row">
+        <div class="col-md-2">
+    <div class="panel panel-primary">
+    <div class="panel-heading">Following</div>
+    <div class="panel-body">...</div>
+    </div></div>
+    <!--- Tweet Panel --->
+        <div class="col-md-6 col-md-offset-1">
+    <div class="panel panel-primary">
+    <div class="panel-heading">Tweets</div>
+    <div class="panel-body">xddddddd</div>
+    </div></div>
+	<!--- Trending Panel --->
+        <div id="trending" class="col-md-2 col-md-offset-10">
+    <div class="panel panel-primary">
+    <div class="panel-heading">Trending</div>
+    <div class="panel-body">#Bootstrap</div>
+</div></div></div>
+>>>>>>> origin/master
 	<?php
 	    // pass in some info;
 		require("../common/common.php"); 
