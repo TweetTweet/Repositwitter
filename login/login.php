@@ -135,9 +135,37 @@
   <body>
     <div id=div1></div>
       <div class="content"></div>
-
+        <!--text-->
+        <!--text-->
+        <!--text-->
+        <!--text-->
+        <div id="text1">
+        <svg viewBox="0 0 800 600">
+            <symbol id="s-text">
+                <text text-anchor="middle"
+                    x="50%"
+                    y="20%"
+                    class="text--line"
+                >
+                Login
+                </text>
+    
+            </symbol>
+  
+            <g class="g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>     
+                <use xlink:href="#s-text" class="text-copy"></use>     
+                <use xlink:href="#s-text" class="text-copy"></use>     
+                <use xlink:href="#s-text" class="text-copy"></use>  
+                <use xlink:href="#s-text" class="text-copy"></use>    
+            </g>
+        </svg>
+        </div>
         <!--login page -->
-        <h1>Login</h1> 
+        <!--login page -->
+        <!--login page -->
+        <!--login page -->
+        <!--login page -->
         <div class="container">
         <form class-'form-inline' action="login.php" method="post">
           <div class="row"> 

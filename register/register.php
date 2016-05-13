@@ -206,9 +206,36 @@
 <body>
     <div id=div1></div>
       <div class="content"></div>
-
-        <!--Loading -->
-        <h1>Register</h1> 
+        <!--text-->
+        <!--text-->
+        <!--text-->
+        <!--text-->
+        <div id="text1">
+        <svg viewBox="0 0 800 600">
+            <symbol id="s-text">
+                <text text-anchor="middle"
+                    x="50%"
+                    y="20%"
+                    class="text--line"
+                >
+                Register
+                </text>
+    
+            </symbol>
+  
+            <g class="g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>     
+                <use xlink:href="#s-text" class="text-copy"></use>     
+                <use xlink:href="#s-text" class="text-copy"></use>     
+                <use xlink:href="#s-text" class="text-copy"></use>  
+                <use xlink:href="#s-text" class="text-copy"></use>    
+            </g>
+        </svg>
+        </div>
+        <!--register-->
+        <!--register-->
+        <!--register-->
+        <!--register-->
         <div class="container">
         <form class-'form-inline' action="register.php" method="post"> 
             <div class="row"> 
@@ -231,7 +258,6 @@
             <input class='form-control' type="password" name="password" value="" /> 
             </div>
             </div>
-            <br /><br /> 
             <button type="submit" class="btn fourth" value="Register" />Register</button>
             </form>
         </div>
