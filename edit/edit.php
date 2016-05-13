@@ -18,6 +18,12 @@
    <li class='active'><a href='#'>Home</a></li>
    <li><a href='#'>Explore</a></li>
    <li><a href='../helppage/helppage.html'>Support</a></li>
+   <form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
 </ul>
 </div>
 <br>
