@@ -32,7 +32,7 @@
 
 <!-- Banner and profile picture -->
 <div class="parent">
-    <img src="https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg" alt="Nanalan" class="container" width="1000" height="128">
+    <img src="https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg" alt="Nanalan" class="container" width= "1000" height="128">
     <div class="inner"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png" class="img-thumbnail" alt="Smiley face" width="128" height="128" /></div>
 </div>
 
@@ -54,8 +54,20 @@
 }
 #trending {
 	position: absolute;
-	top: 450px;
-	left: -10px;
+	top: 400px;
+	left: 400px;
+}
+
+#tweets {
+	position: absolute;
+	top: 400px;
+	left: 250px;
+}
+
+#following {
+	position: absolute;
+	top: 400px;
+	left: 50px;
 }
 body {
     background-image: url("http://wallpapercave.com/wp/Hs03mmf.png");
@@ -63,20 +75,20 @@ body {
 </style>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <!--- Following Panel --->
+
     <div class="row">
-        <div class="col-md-2">
+        <div id="following" class="col-md-2">
     <div class="panel panel-primary">
     <div class="panel-heading">Following</div>
     <div class="panel-body">...</div>
     </div></div>
-    <!--- Tweet Panel --->
-        <div class="col-md-6 col-md-offset-1">
+
+        <div id="tweets" class="col-md-6 col-md-offset-1">
     <div class="panel panel-primary">
     <div class="panel-heading">Tweets</div>
     <div class="panel-body">#Bootstrap is amazing</div>
     </div></div>
-	<!--- Trending Panel --->
+
         <div id="trending" class="col-md-2 col-md-offset-10">
     <div class="panel panel-primary">
     <div class="panel-heading">Trending</div>

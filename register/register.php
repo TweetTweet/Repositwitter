@@ -187,16 +187,53 @@
     } 
      
 ?> 
-<h1>Register</h1> 
-<form action="register.php" method="post"> 
-    Username:<br /> 
-    <input type="text" name="username" value="" /> 
-    <br /><br /> 
-    E-Mail:<br /> 
-    <input type="text" name="email" value="" /> 
-    <br /><br /> 
-    Password:<br /> 
-    <input type="password" name="password" value="" /> 
-    <br /><br /> 
-    <input type="submit" value="Register" /> 
-</form>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Register!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  </head>
+<body>
+    <div id=div1></div>
+      <div class="content"></div>
+
+        <!--Loading -->
+        <h1>Register</h1> 
+        <div class="container">
+        <form class-'form-inline' action="register.php" method="post"> 
+            <div class="row"> 
+            <div class='form-group col-lg-3'>
+            <label for="code">Username:</label><br />
+            <input class='form-control' type="text" name="username" value="" /> 
+            </div>
+            </div>
+            <br /><br /> 
+            <div class="row"> 
+            <div class='form-group col-lg-3'>
+            <label for="code">Email:</label><br />
+            <input class='form-control' type="text" name="email" value="" /> 
+            </div>
+            </div>
+            <br /><br /> 
+            <div class="row"> 
+            <div class='form-group col-lg-3'>
+            <label for="code">Password:</label><br />
+            <input class='form-control' type="password" name="password" value="" /> 
+            </div>
+            </div>
+            <br /><br /> 
+            <button type="submit" class="btn fourth" value="Register" />Register</button>
+            </form>
+        </div>
+        </body>
+</html>
