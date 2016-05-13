@@ -37,7 +37,7 @@
 <style>
 .parent{
     width:170px;
-    height:360px;
+    height:190px;
     position:absolute;
     z-index:0;
 }
