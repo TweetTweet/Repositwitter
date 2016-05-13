@@ -19,7 +19,7 @@
    <li><img src="https://www.seeklogo.net/wp-content/uploads/2011/06/twitter-bird-vector-400x400.png" width = 42; height = 42;><li>
    <li class='active'><a href='#'>Home</a></li>
    <li><a href='#'>Explore</a></li>
-   <li><a href='#'>Support</a></li>
+   <li><a href='../helppage/helppage.html'>Support</a></li>
 </ul>
 </div>
 <br>
