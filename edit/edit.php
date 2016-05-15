@@ -32,8 +32,8 @@
 <!--Searching-->
 <?php
 if (isset($_GET['search'])) {
-    $searchName = $_GET["search"];
-	print "<h1>$searchName</h1>";
+    $searchName = $_GET["search"]; 
+	print "<h1>$printName</h1>";
 }
 // pass in some info;
 		require("../common/common.php"); 
