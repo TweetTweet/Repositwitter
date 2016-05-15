@@ -29,13 +29,42 @@
 <br>
 
 <body>
-
-<!-- Banner and profile picture -->
-<div class="parent">
-    <img src="https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg" alt="Nanalan" class="container" width= "1000" height="128">
-    <div class="inner"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png" class="img-thumbnail" alt="Smiley face" width="128" height="128" /></div>
-</div>
-
+    <!-- Banner and profile picture -->
+<?php
+// pass in some info;
+		require("../common/common.php"); 
+		
+		if(empty($_SESSION['user'])) { 
+  
+			// If they are not, we redirect them to the login page. 
+			$location = "http://" . $_SERVER['HTTP_HOST'] . "../login/login.php";
+			echo '<META HTTP-EQUIV="refresh" CONTENT="0;URL='.$location.'">';
+			//exit;
+         
+        	// Remember that this die statement is absolutely critical.  Without it, 
+        	// people can view your members-only content without logging in. 
+        	die("Redirecting to login.php"); 
+    	} 
+		
+		// To access $_SESSION['user'] values put in an array, show user his username
+		$arr = array_values($_SESSION['user']);
+		echo "<p id='p3'>Welcome, $arr[1]</p>";
+		$name = $arr[1];
+if (substr($name, 0, 1) === "j")
+{
+echo "<div class='parent'>";
+echo "<img src='https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg' alt='Nanalan' class='container' width= '1000' height='128'>";
+echo "<div class='inner'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png' class='img-thumbnail' alt='Smiley face' width='128' height='128'/>";
+ echo "</div></div>";
+}
+if (substr($name, 0, 1) === "b")
+{
+echo "<div class='parent'>";
+echo "<img src='https://www.primagames.com/media/images/news/Zelda_box_set_closer_look_at_the_hardcover.jpg' alt='Scenary' class='container' width= '1000' height='128'>";
+echo "<div class='inner'><img src='https://pbs.twimg.com/media/Cfmydy5W4AEjJJe.jpg' class='img-thumbnail' alt='NFKRZ' width='128' height='128'/>";
+ echo "</div></div>";
+}
+?>
     <br><br><br><br><br><br><br><br><br><br>
 
 <style>
@@ -96,24 +125,6 @@ body {
 </div></div></div>
 >>>>>>> origin/master
 	<?php
-	    // pass in some info;
-		require("../common/common.php"); 
-		
-		if(empty($_SESSION['user'])) { 
-  
-			// If they are not, we redirect them to the login page. 
-			$location = "http://" . $_SERVER['HTTP_HOST'] . "../login/login.php";
-			echo '<META HTTP-EQUIV="refresh" CONTENT="0;URL='.$location.'">';
-			//exit;
-         
-        	// Remember that this die statement is absolutely critical.  Without it, 
-        	// people can view your members-only content without logging in. 
-        	die("Redirecting to login.php"); 
-    	} 
-		
-		// To access $_SESSION['user'] values put in an array, show user his username
-		$arr = array_values($_SESSION['user']);
-		echo "<p id='p3'>Welcome, $arr[1]</p>";
 
 		// open connection
 		$connection = mysql_connect($host, $username, $password) or die ("Unable to connect!");

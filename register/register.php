@@ -52,7 +52,7 @@
         // For more information on SQL injections, see Wikipedia: 
         // http://en.wikipedia.org/wiki/SQL_Injection 
         $query_params = array( 
-            ':username' => $_POST['username'] 
+            ':username' => $_POST['username']
         ); 
          
         try 
@@ -118,12 +118,14 @@
                 username, 
                 password, 
                 salt, 
-                email 
+                email,
+				Picture 
             ) VALUES ( 
                 :username, 
                 :password, 
                 :salt, 
-                :email 
+                :email,
+				:Picture 
             ) 
         "; 
          
@@ -143,6 +145,9 @@
         // password cannot be recovered from the hash.  For more information: 
         // http://en.wikipedia.org/wiki/Cryptographic_hash_function 
         $password = hash('sha256', $_POST['password'] . $salt); 
+		
+		//Picture
+		$Picture = dechex(rand(0,5));
          
         // Next we hash the hash value 65536 more times.  The purpose of this is to 
         // protect against brute force attacks.  Now an attacker must compute the hash 65537 
@@ -161,7 +166,8 @@
             ':username' => $_POST['username'], 
             ':password' => $password, 
             ':salt' => $salt, 
-            ':email' => $_POST['email'] 
+            ':email' => $_POST['email'],
+			':Picture' => $Picture
         ); 
          
         try 
