@@ -20,17 +20,21 @@
    <li><a href='../helppage/helppage.html'>Support</a></li>
    <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
+    <input type="search" name="search" id="mySearch" class="form-control" placeholder="Search">
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
 </ul>
 </div>
 <br>
-
 <body>
-    <!-- Banner and profile picture -->
+<br><br>
+<!--Searching-->
 <?php
+if (isset($_GET['search'])) {
+    $searchName = $_GET["search"];
+	print "<h1>$searchName</h1>";
+}
 // pass in some info;
 		require("../common/common.php"); 
 		
@@ -50,6 +54,7 @@
 		$arr = array_values($_SESSION['user']);
 		echo "<p id='p3'>Welcome, $arr[1]</p>";
 		$name = $arr[1];
+// Banner and profile picture
 if (substr($name, 0, 1) === "j")
 {
 echo "<div class='parent'>";
