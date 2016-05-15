@@ -32,7 +32,8 @@
 <!--Searching-->
 <?php
 if (isset($_GET['search'])) {
-    $searchName = $_GET["search"]; 
+    $searchName = $_GET["search"];
+	$printName = mysql_query("SELECT * FROM users WHERE username=$searchName"); 
 	print "<h1>$printName</h1>";
 }
 // pass in some info;
