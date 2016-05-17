@@ -209,6 +209,33 @@ body {
 
 	?>
     
+<div id="comment">
+
+<div class="wrapper">
+<div class="commentBoxfloat">
+  <form id="cmnt">
+    <fieldset>
+      <div class="form_grp">
+        <label>comment</label>
+        <textarea id="userCmnt" placeholder="Write your comment here. You can Edit and Delete options. Just Hover in Your comment, you see the both buttons"></textarea>        
+      </div>
+      <div class="form_grp">
+      <button type="button" id="commentsub">Submit</button>
+      </div>
+    </fieldset>
+  </form>  
+</div>
+  
+  <div id="cmntContr"></div>
+  
+  
+ </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
+   
+</div>
+
     <!-- This is the HTML form that appears in the browser -->
    	<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
     	Country: <input type="text" name="country">
