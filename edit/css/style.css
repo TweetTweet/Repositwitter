@@ -211,7 +211,7 @@ textarea{
 div.commentBoxfloat {
 	position: absolute;
 	top: 270px;
-	right: 185px;
+	right: 100px;
 	width: 500px;
 	height: 500px;
 }
