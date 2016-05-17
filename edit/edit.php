@@ -24,6 +24,7 @@
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
+ <form action="../logout/logout.php" method="post"><button class="btn btn-default">Log out</button></form> 
 </ul>
 </div>
 <br>
@@ -200,6 +201,5 @@ div.form_grp {
         <script src="js/index.js"></script>
    
 </div>
-    <form action="../logout/logout.php" method="post"><button>Log out</button></form>
 	</body>
 </html>
