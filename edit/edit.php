@@ -142,7 +142,7 @@ if (substr($name, 0, 1) === "a")
   <form id="cmnt">
     <fieldset>
       <div class="form_grp">
-        <label>comment</label>
+        <label>What's on your mind?</label>
         <textarea id="userCmnt" placeholder="Write your comment here. You can Edit and Delete options. Just Hover in Your comment, you see the both buttons"></textarea>        
       </div>
       <div class="form_grp">
