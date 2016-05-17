@@ -59,14 +59,14 @@ if (isset($_GET['search'])) {
 if (substr($name, 0, 1) === "j")
 {
 	echo "<div class='parent'>";
-	echo "<img src='https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg' alt='Nanalan' class='container' width= '1000' height='128'>";
+	echo "<img src='https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg' alt='Nanalan' class='container' width= '1270' height='300'>";
 	echo "<div class='inner'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png' class='img-thumbnail' alt='Smiley face' width='128' height='128'/>";
 	echo "</div></div>";
 }
 if (substr($name, 0, 1) === "b")
 {
 	echo "<div class='parent'>";
-	echo "<img src='https://www.primagames.com/media/images/news/Zelda_box_set_closer_look_at_the_hardcover.jpg' alt='Scenary' 			class='container' width= '1000' height='128'>";
+	echo "<img src='https://www.primagames.com/media/images/news/Zelda_box_set_closer_look_at_the_hardcover.jpg' alt='Scenary' 			class='container' width= '1270' height='300'>";
 	echo "<div class='inner'><img src='https://pbs.twimg.com/media/Cfmydy5W4AEjJJe.jpg' class='img-thumbnail' alt='NFKRZ' width='128' 	height='128'/>";
 	echo "</div></div>";
 }
@@ -86,6 +86,7 @@ if (substr($name, 0, 1) === "a")
     height:190px;
     position:absolute;
     z-index:0;
+	top: 60px;
 }
 
 .inner{
@@ -96,43 +97,31 @@ if (substr($name, 0, 1) === "a")
 }
 div.inner {
 	position:absolute;
-	top: 200px;
-}
-#trending {
-	position: absolute;
-	top: 400px;
-	left: 400px;
+	top: 230px;
 }
 
 #tweets {
 	position: absolute;
-	top: 500px;
+	top: 450px;
 	left: 250px;
-}
-
-#following {
-	position: absolute;
-	top: 400px;
-	left: 50px;
 }
 body {
     background-image: url("http://wallpapercave.com/wp/Hs03mmf.png");
 }
+div.commentBoxfloat {
+	position: absolute;
+	top: 250px;
+	right: 185px;
+	width: 500px;
+	height: 500px;
+}
+div.form_grp {
+	top: 100px;
+}
 </style>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div id="tweets" class="col-md-6 col-md-offset-1">
-    <div class="panel panel-primary">
-    <div class="panel-heading">Tweets</div>
-    <div class="panel-body">#Bootstrap is amazing</div>
-    </div></div>
-
-        <div id="trending" class="col-md-2 col-md-offset-10">
-    <div class="panel panel-primary">
-    <div class="panel-heading">Trending</div>
-    <div class="panel-body">#Bootstrap</div>
 </div></div></div>
->>>>>>> origin/master
 	<?php
 
 		// open connection
@@ -146,29 +135,6 @@ body {
        
 		// execute query
 		$result = mysql_query($query) or die ("Error in query: $query. ".mysql_error());
-
-		// see if any rows were returned
-		if (mysql_num_rows($result) > 0) {
-
-    		// print them one after another
-			echo "<div class='panel panel-default'>";
-			echo "<div class='panel-heading'>Countries National Animal</div>";
-    		echo "<table cellpadding=10 border=1 class='table'>";
-    		while($row = mysql_fetch_row($result)) {
-        		echo "<tr>";
-				echo "<td>".$row[0]."</td>";
-        		echo "<td>" . $row[1]."</td>";
-        		echo "<td>".$row[2]."</td>";
-				echo "<td><a href=".$_SERVER['PHP_SELF']."?id=".$row[0].">Delete</a></td>";
-        		echo "</tr>";
-    		}
-		    echo "</table>";
-
-		} else {
-			
-    		// print status message
-    		echo "No rows found!";
-		}
 
 		// free result set memory
 		mysql_free_result($result);
@@ -225,7 +191,6 @@ body {
     </fieldset>
   </form>  
 </div>
-  
   <div id="cmntContr"></div>
   
   
@@ -235,13 +200,6 @@ body {
         <script src="js/index.js"></script>
    
 </div>
-
-    <!-- This is the HTML form that appears in the browser -->
-   	<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
-    	Country: <input type="text" name="country">
-    	National animal: <input type="text" name="animal">
-    	<input type="submit" name="submit">
-    </form>
     <form action="../logout/logout.php" method="post"><button>Log out</button></form>
 	</body>
 </html>
