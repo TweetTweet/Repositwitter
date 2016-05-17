@@ -1,8 +1,9 @@
 .parent{
-    width:200px;
-    height:200px;
+    width:170px;
+    height:190px;
     position:absolute;
     z-index:0;
+    top: 60px;
 }
 
 .inner{
@@ -10,6 +11,17 @@
     z-index:1;
     bottom:0;
     right:0;
+}
+
+div.inner {
+  position:absolute;
+  top: 230px;
+}
+
+#tweets {
+  position: absolute;
+  top: 450px;
+  left: 250px;
 }
 /****************************************/
 
@@ -120,8 +132,8 @@ body {
 #comment{
   font: 13px/100% tahoma;
   position: absolute;
-  top: 200px;
-  left: 300px;
+  top: 150px;
+  left: 50px;
   }
 .clear{clear:both;}
 .wrapper{
@@ -129,11 +141,11 @@ body {
   margin:10px auto;
 }
 .commentBox{
-  
+;
 }
 fieldset{
   padding:10px;
-  background:#69bdf4;
+  background:#4191bd;
 }
 .form_grp{
   margin-bottom:10px;
