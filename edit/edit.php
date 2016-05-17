@@ -67,7 +67,7 @@ if (substr($name, 0, 1) === "j")
 if (substr($name, 0, 1) === "b")
 {
 	echo "<div class='parent'>";
-	echo "<img src='https://www.primagames.com/media/images/news/Zelda_box_set_closer_look_at_the_hardcover.jpg' alt='Scenary' 			class='container' width= '1270' height='300'>";
+	echo "<img src='http://assets.hightimes.com/styles/large/s3/WeedTrivia-Quiz.jpg?itok=CwZSKzX1' alt='Scenary' 			class='container' width= '1270' height='300'>";
 	echo "<div class='inner'><img src='https://pbs.twimg.com/media/Cfmydy5W4AEjJJe.jpg' class='img-thumbnail' alt='NFKRZ' width='128' 	height='128'/>";
 	echo "</div></div>";
 }
@@ -111,7 +111,7 @@ body {
 }
 div.commentBoxfloat {
 	position: absolute;
-	top: 250px;
+	top: 270px;
 	right: 185px;
 	width: 500px;
 	height: 500px;
