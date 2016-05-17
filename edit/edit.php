@@ -80,7 +80,6 @@ if (substr($name, 0, 1) === "a")
 }
 ?>
     <br><br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div></div></div>
 	<?php
