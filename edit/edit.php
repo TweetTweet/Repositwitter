@@ -58,17 +58,24 @@ if (isset($_GET['search'])) {
 // Banner and profile picture
 if (substr($name, 0, 1) === "j")
 {
-echo "<div class='parent'>";
-echo "<img src='https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg' alt='Nanalan' class='container' width= '1000' height='128'>";
-echo "<div class='inner'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png' class='img-thumbnail' alt='Smiley face' width='128' height='128'/>";
- echo "</div></div>";
+	echo "<div class='parent'>";
+	echo "<img src='https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg' alt='Nanalan' class='container' width= '1000' height='128'>";
+	echo "<div class='inner'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png' class='img-thumbnail' alt='Smiley face' width='128' height='128'/>";
+	echo "</div></div>";
 }
 if (substr($name, 0, 1) === "b")
 {
-echo "<div class='parent'>";
-echo "<img src='https://www.primagames.com/media/images/news/Zelda_box_set_closer_look_at_the_hardcover.jpg' alt='Scenary' class='container' width= '1000' height='128'>";
-echo "<div class='inner'><img src='https://pbs.twimg.com/media/Cfmydy5W4AEjJJe.jpg' class='img-thumbnail' alt='NFKRZ' width='128' height='128'/>";
- echo "</div></div>";
+	echo "<div class='parent'>";
+	echo "<img src='https://www.primagames.com/media/images/news/Zelda_box_set_closer_look_at_the_hardcover.jpg' alt='Scenary' 			class='container' width= '1000' height='128'>";
+	echo "<div class='inner'><img src='https://pbs.twimg.com/media/Cfmydy5W4AEjJJe.jpg' class='img-thumbnail' alt='NFKRZ' width='128' 	height='128'/>";
+	echo "</div></div>";
+}
+if (substr($name, 0, 1) === "a")
+{
+	echo "<div class='parent'>";
+	echo "<img src='https://static.pexels.com/photos/909/flowers-garden-colorful-colourful.jpg' alt='Scenary' class='container' 	width='1270' height='300'>";
+	echo "<div class='inner' id='profilePic'><img src='http://www.technobuffalo.com/wp-content/uploads/2016/05/Poke%CC%81mon-Sun-and-Moon-5-1280x1717.jpg' class='img-thumbnail' alt='Litten' width='128' height='128' /> ";
+ 	echo "</div></div>";
 }
 ?>
     <br><br><br><br><br><br><br><br><br><br>
@@ -87,6 +94,10 @@ echo "<div class='inner'><img src='https://pbs.twimg.com/media/Cfmydy5W4AEjJJe.j
     bottom:0;
     right:0;
 }
+div.inner {
+	position:absolute;
+	top: 200px;
+}
 #trending {
 	position: absolute;
 	top: 400px;
@@ -95,7 +106,7 @@ echo "<div class='inner'><img src='https://pbs.twimg.com/media/Cfmydy5W4AEjJJe.j
 
 #tweets {
 	position: absolute;
-	top: 400px;
+	top: 500px;
 	left: 250px;
 }
 
@@ -110,14 +121,6 @@ body {
 </style>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <div class="row">
-        <div id="following" class="col-md-2">
-    <div class="panel panel-primary">
-    <div class="panel-heading">Following</div>
-    <div class="panel-body">...</div>
-    </div></div>
-
         <div id="tweets" class="col-md-6 col-md-offset-1">
     <div class="panel panel-primary">
     <div class="panel-heading">Tweets</div>
