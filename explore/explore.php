@@ -28,39 +28,5 @@
 </ul>
 </div>
 <br>
-<body>
-<!-- ************************************ Beginning Help Center Code ******************************** -->
-
-<body bgcolor="#E6E6FA">
-
-<!-- Fancy Title Text -->  
-
-        <!--text-->
-        <!--text-->
-        <!--text-->
-        <!--text-->
-        <div id="text1">
-        <svg viewBox="0 0 800 600">
-            <symbol id="s-text">
-                <text text-anchor="middle"
-                    x="50%"
-                    y="12%"
-                    class="text--line"
-                >
-                Help and Info
-                </text>
-    
-            </symbol>
-  
-            <g class="g-ants">
-                <use xlink:href="#s-text" class="text-copy"></use>     
-                <use xlink:href="#s-text" class="text-copy"></use>     
-                <use xlink:href="#s-text" class="text-copy"></use>     
-                <use xlink:href="#s-text" class="text-copy"></use>  
-                <use xlink:href="#s-text" class="text-copy"></use>    
-            </g>
-        </svg>
-        </div>
-</body>
 </html> 
 <!--finished-->
