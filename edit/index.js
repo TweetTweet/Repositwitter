@@ -34,4 +34,4 @@ $(function(){
     inDexValue = $(this).parent('div.viewCmnt').index();
     
   });
-  });
+  }); 

@@ -23,7 +23,7 @@
     <input type="search" name="search" id="mySearch" class="form-control" placeholder="Search">
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
-  <button class="btn fourth" onclick="location='../logout/logout.php'" method="post" >Logout</button>
+  <button class="btn fourth" onClick="location='../logout/logout.php'" method="post" >Logout</button>
 </form>
 </ul>
 </div>
