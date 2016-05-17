@@ -81,6 +81,50 @@ if (substr($name, 0, 1) === "a")
 ?>
     <br><br><br><br><br><br><br><br><br><br>
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+<style>
+.parent{
+    width:170px;
+    height:190px;
+    position:absolute;
+    z-index:0;
+	top: 60px;
+}
+
+.inner{
+    position:absolute;
+    z-index:1;
+    bottom:0;
+    right:0;
+}
+div.inner {
+	position:absolute;
+	top: 230px;
+}
+
+#tweets {
+	position: absolute;
+	top: 450px;
+	left: 250px;
+}
+body {
+    background-image: url("http://wallpapercave.com/wp/Hs03mmf.png");
+}
+div.commentBoxfloat {
+	position: absolute;
+	top: 270px;
+	right: 185px;
+	width: 500px;
+	height: 500px;
+}
+div.form_grp {
+	top: 100px;
+}
+</style>
+>>>>>>> Stashed changes
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div></div></div>
 	<?php
