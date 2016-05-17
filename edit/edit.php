@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="css/style.css">
    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
    <script src="script.js"></script>
-   <title>CSS MenuMaker</title>
+   <title>Home</title>
 </head>
 <div id='cssmenu'>
 <ul>

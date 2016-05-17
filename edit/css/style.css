@@ -160,6 +160,7 @@ textarea{
   background-color:#0e7ec7;
   color:#fff;
   float:right;
+  box-sizing:border-box;
 }
 .viewCmnt{
   clear:both;
