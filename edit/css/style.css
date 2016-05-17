@@ -208,3 +208,18 @@ textarea{
   background:url(https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/cross-24-16.png) no-repeat center #0e7ec7;
   z-index:2;
 }
+
+/*button*/
+.fourth {
+  border-color: #669999;
+  color: #fff;
+  background-image: -webkit-linear-gradient(45deg, #669999 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #669999 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+.fourth:hover {
+  background-position: 0;
+}
