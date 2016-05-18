@@ -124,7 +124,7 @@ div.inner {
 }
 
 body {
-    background-image: url("http://wallpapercave.com/wp/Hs03mmf.png");
+    background-color: #EEEEEE;
 }
 
 /*comment*/
@@ -208,7 +208,7 @@ textarea{
   background:url(https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/cross-24-16.png) no-repeat center #0e7ec7;
   z-index:2;
 }
-<<<<<<< HEAD
+
 
 /*button*/
 .fourth {
@@ -223,12 +223,9 @@ textarea{
 }
 .fourth:hover {
   background-position: 0;
-=======
-div.commentBoxfloat {
 	position: absolute;
 	top: 320px;
 	right: -65px;
 	width: 500px;
 	height: 500px;
->>>>>>> origin/master
 }
