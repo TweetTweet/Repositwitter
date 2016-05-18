@@ -35,7 +35,7 @@
 <?php
 if (isset($_GET['search'])) {
     $searchName = $_GET["search"];
-	$printName = mysql_query("SELECT * FROM users WHERE username=$searchName"); 
+	$printName = mysql_query("SELECT * FROM symbols WHERE animal=$searchName"); 
 	print "<h1>$printName</h1>";
 }
 // pass in some info;
