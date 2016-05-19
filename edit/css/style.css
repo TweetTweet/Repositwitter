@@ -152,7 +152,9 @@ body {
 /* ================ The Timeline ================ */
 
 #timeline {
-  position: relative;
+  position: absolute;
+  top: 100px;
+  left: 550px;
   width: 660px;
   margin: 0 auto;
   margin-top: 20px;
@@ -329,7 +331,7 @@ body {
 .clear{clear:both;}
 .wrapper{
   position: absolute;
-  top: 300px;
+  top: 350px;
   left: 60px;
   width:400px;
   margin:10px auto;
@@ -339,7 +341,7 @@ body {
 }
 fieldset{
   padding:10px;
-  background:#69bdf4;
+  background:#4191bd;
 }
 .form_grp{
   margin-bottom:40px;
@@ -363,10 +365,10 @@ textarea{
 }
 #postbtn{
   position: absolute;
-  top: 470px;
+  top: 520px;
   left: 350px;
   padding:5px 20px;
-  background-color:#0e7ec7;
+  background-color:#4191bd;
   color:#fff;
   float:right;
 }
