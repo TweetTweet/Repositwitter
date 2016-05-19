@@ -36,6 +36,26 @@
 
 <br><br>
 
+<!-- post -->
+<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+<div class="wrapper">
+<div class="commentBoxfloat">
+    <fieldset>
+      <div class="form_grp">
+        <label>What's on your mind?</label>
+        <input id="urpost" type="text" name="animal" placeholder="Hmm..."> 
+        <input id="annoy" type="submit" name="submit">
+      </div>
+      </fieldset> 
+</div>
+</div>
+
+</form>
+
+
+ <button id="postbtn" onclick="doit()">Post</button>
+
+
 <!--php-->
 <!--php-->
 <!--php-->
@@ -92,7 +112,7 @@ if (substr($name, 0, 1) === "a")
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div></div></div>
 	<?php
-
+		date_default_timezone_set('Canada/Toronto');
 		// open connection
 		$connection = mysql_connect($host, $username, $password) or die ("Unable to connect!");
 
@@ -109,13 +129,15 @@ if (substr($name, 0, 1) === "a")
 		mysql_free_result($result);
 
 		// set variable values to HTML form inputs
-		$country = mysql_escape_string($_POST['country']);
+		$country = mysql_escape_string($arr[1]);
     	$animal = mysql_escape_string($_POST['animal']);
+    	$cur_date = mysql_escape_string(date('Y-m-d H:i:s'));
 		
+		echo animal;
 		// check to see if user has entered anything
 		if ($animal != "") {
 	 		// build SQL query
-			$query = "INSERT INTO symbols (country, animal) VALUES ('$country', '$animal')";
+			$query = "INSERT INTO symbols (country, animal, cur_date) VALUES ('$country', '$animal', '$cur_date')";
 			// run the query
      		$result = mysql_query($query) or die ("Error in query: $query. ".mysql_error());
 			// refresh the page to show new update
@@ -139,8 +161,8 @@ if (substr($name, 0, 1) === "a")
 			
 		}
 		
-		date_default_timezone_set('Canada/Toronto');
-		$current_date = date('Y-m-d H:i:s');
+		
+		
 		// close connection
 		mysql_close($connection);
 		
@@ -201,41 +223,31 @@ if (substr($name, 0, 1) === "a")
 </ul>
 </div>
 
-<!-- post -->
-<div class="wrapper">
-<div class="commentBoxfloat">
-  <form id="cmnt">
-    <fieldset>
-      <div class="form_grp">
-        <label>What's on your mind?</label>
-        <textarea id="userCmnt" placeholder="Hmm..."></textarea>        
-      </div>
-      <div class="form_grp">
-      </div>
-    </fieldset>
-  </form>  
-</div>
-</div>
 
 
-<button id="postbtn" onclick="post()">Post</button>
 </body>
 </html>
 
 <script>
 
-function post() {
+function makepost() {
+	var left_right = 1;
     var div = document.createElement('div');
-    var userCmnt = $('#userCmnt').val();
-    var name = "<?php echo $name ?>";
-    var current_date = "<?php echo $current_date ?>";
 
-
-    div.innerHTML = '<li> <div class="direction-r"> <div class="flag-wrapper"> <span class="flag">' + name + '</span>\ <span class="time-wrapper"> <span class="time">' + current_date + '</span></span>\ </div>\ <div class="desc">tryhard</div>\ </div>\ </li>';
-
+    var country = "<?php echo $country ?>"; //username
+    var cur_date = "<?php echo $cur_date ?>";
+    var animal = "<?php echo $animal ?>"; //tweets
+    
+    div.innerHTML = '<li> <div class="direction-r"> <div class="flag-wrapper"> <span class="flag">' + country + '</span>\ <span class="time-wrapper"> <span class="time">' + cur_date + '</span></span>\ </div>\ <div class="desc">' + animal + '</div>\ </div>\ </li>';
      document.getElementById('timeline').appendChild(div);
+   	left_right = 2;
 }
-//try click the post button, then scroll down to the bottom
-//date and username works, still working on tweet
+
+function doit() {
+	makepost()
+    document.getElementById("annoy").click(); // Click
+    
+}
+
 
 </script>

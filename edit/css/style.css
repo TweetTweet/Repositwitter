@@ -330,7 +330,7 @@ body {
 
 .clear{clear:both;}
 .wrapper{
-  position: absolute;
+  position: fixed;
   top: 350px;
   left: 60px;
   width:400px;
@@ -356,7 +356,7 @@ label{
   color:#fff;
  padding-left:34px; background:url(https://cdn3.iconfinder.com/data/icons/glypho-free/64/pen-checkbox-32.png) no-repeat left center;
 }
-textarea{
+#this{
   width:100%;
   height:100px;
   padding:10px;
@@ -364,7 +364,7 @@ textarea{
   resize:none;
 }
 #postbtn{
-  position: absolute;
+  position: fixed;
   top: 520px;
   left: 350px;
   padding:5px 20px;
