@@ -199,7 +199,20 @@ if (substr($name, 0, 1) === "a")
 		
 		// This is a comment
 		//thanks ray 
-
+		echo "<table>";
+			if (isset($_GET['searchz'])) {
+				$searchName = $_GET['searchz'];
+				$sql = $db->prepare("SELECT * FROM symbols WHERE animal LIKE '$searchName%'");
+				$sql->execute(array('$searchName%'=>$_REQUEST['searchz']));
+				while ($row=$sql->fetch())
+    			{
+       //Here is where you will loop through all the results for your search. If 
+       //you had for example for each product name, price, and category, 
+       //you might do the following
+       			echo "<tr><td>$row[animal]</td></tr>";
+    		}
+}
+echo "</table>";
 
 	?>
     
