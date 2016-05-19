@@ -133,6 +133,8 @@ if (substr($name, 0, 1) === "a")
 		
 		// close connection
 		mysql_close($connection);
+		
+		// This is a comment
 
 	?>
     
