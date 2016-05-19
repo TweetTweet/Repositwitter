@@ -206,7 +206,7 @@ else
 		
 		// This is a comment
 		//thanks ray 
-		echo "<table>";
+
 			if (isset($_GET['searchz'])) {
 				$searchName = $_GET['searchz'];
 				$sql = $db->prepare("SELECT * FROM symbols WHERE animal LIKE '$searchName%'");
