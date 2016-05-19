@@ -25,7 +25,7 @@
    <li><a href='../helppage/helppage.html'>Support</a></li>
    <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
-    <input type="search" name="search" id="mySearch" class="form-control" placeholder="Search">
+    <input type="search" name="searchz" id="mySearch" class="form-control" placeholder="Search">
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
    <form action="logout.php" method="post"><button>Log out</button></form>
@@ -45,7 +45,7 @@
       <div class="form_grp">
         <label>What's on your mind?</label>
         <input id="animal" type="text" name="animal" placeholder="Hmm..." > 
-        <input id="postbtn" type="submit" name="submit" onclick="addpost()">
+        <input id="postbtn" type="submit" name="submit" onClick="addpost()">
       </div>
       </fieldset> 
 </div>
