@@ -3,6 +3,7 @@
 <!--making everything -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <!--navbar-->
 <!--navbar-->
 <!--navbar-->
@@ -21,15 +22,14 @@
 <ul>
    <li><img src="https://www.seeklogo.net/wp-content/uploads/2011/06/twitter-bird-vector-400x400.png" width = 42; height = 42;><li>
    <li class='active'><a href='#'>Home</a></li>
-   <li><a href='../explore/explore.php'>Explore</a></li>
    <li><a href='../helppage/helppage.html'>Support</a></li>
    <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <input type="search" name="search" id="mySearch" class="form-control" placeholder="Search">
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
-  <button class="btn fourth" onClick="location='../logout/logout.php'" method="post" >Logout</button>
-</form>
+   <form action="logout.php" method="post"><button>Log out</button></form>
+
 </ul>
 </div>
 <br>
@@ -37,23 +37,23 @@
 <br><br>
 
 <!-- post -->
-<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+<form name = "form1" action= "<?=$_SERVER['PHP_SELF']?>" method="post" onsubmit="addpost()">
+<form name ="form2" action="javascript:addpost();">
 <div class="wrapper">
 <div class="commentBoxfloat">
     <fieldset>
       <div class="form_grp">
         <label>What's on your mind?</label>
-        <input id="urpost" type="text" name="animal" placeholder="Hmm..."> 
-        <input id="annoy" type="submit" name="submit">
+        <input id="animal" type="text" name="animal" placeholder="Hmm..." > 
+        <input id="postbtn" type="submit" name="submit" onclick="addpost()">
       </div>
       </fieldset> 
 </div>
 </div>
-
+</form>
 </form>
 
 
- <button id="postbtn" onclick="doit()">Post</button>
 
 
 <!--php-->
@@ -125,6 +125,38 @@ if (substr($name, 0, 1) === "a")
 		// execute query
 		$result = mysql_query($query) or die ("Error in query: $query. ".mysql_error());
 
+
+
+
+
+			/*
+				// see if any rows were returned
+		if (mysql_num_rows($result) > 0) {
+			for (int i = 0; i++) {
+			}
+    		// print them one after another
+    		while($row = mysql_fetch_row($result)) {
+    			$data[] = $row[0];
+        		echo $data;
+    		}
+
+		} else {
+			
+    		// print status message
+    		echo "No rows found!";
+		}
+
+		*/
+
+
+
+
+
+
+
+
+
+
 		// free result set memory
 		mysql_free_result($result);
 
@@ -133,7 +165,6 @@ if (substr($name, 0, 1) === "a")
     	$animal = mysql_escape_string($_POST['animal']);
     	$cur_date = mysql_escape_string(date('Y-m-d H:i:s'));
 		
-		echo animal;
 		// check to see if user has entered anything
 		if ($animal != "") {
 	 		// build SQL query
@@ -230,7 +261,7 @@ if (substr($name, 0, 1) === "a")
 
 <script>
 
-function makepost() {
+function addpost() {
 	var left_right = 1;
     var div = document.createElement('div');
 
@@ -240,13 +271,17 @@ function makepost() {
     
     div.innerHTML = '<li> <div class="direction-r"> <div class="flag-wrapper"> <span class="flag">' + country + '</span>\ <span class="time-wrapper"> <span class="time">' + cur_date + '</span></span>\ </div>\ <div class="desc">' + animal + '</div>\ </div>\ </li>';
      document.getElementById('timeline').appendChild(div);
-   	left_right = 2;
 }
 
-function doit() {
-	makepost()
-    document.getElementById("annoy").click(); // Click
+function ori_post() {
+
+	var div = document.createElement('div');
+    var country_ori = "<?php echo $country ?>"; //username
+    var cur_date_ori = "<?php echo $cur_date ?>";
+    var animal_ori = "<?php echo $animal ?>"; //tweets
     
+    div.innerHTML = '<li> <div class="direction-r"> <div class="flag-wrapper"> <span class="flag">' + country_ori + '</span>\ <span class="time-wrapper"> <span class="time">' + cur_date_ori + '</span></span>\ </div>\ <div class="desc">' + animal_ori + '</div>\ </div>\ </li>';
+     document.getElementById('timeline').appendChild(div);
 }
 
 
