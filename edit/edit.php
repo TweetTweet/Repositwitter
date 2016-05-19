@@ -28,7 +28,7 @@
     <input type="search" name="searchz" id="mySearch" class="form-control" placeholder="Search">
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
-   <form action="logout.php" method="post"><button>Log out</button></form>
+  <form><button ction="location:../logout/logout.php" method="post">Log out</button></form>
 
 </ul>
 </div>
