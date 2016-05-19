@@ -107,6 +107,13 @@ if (substr($name, 0, 1) === "a")
 	echo "<div class='inner' id='profilePic'><img src='http://www.technobuffalo.com/wp-content/uploads/2016/05/Poke%CC%81mon-Sun-and-Moon-5-1280x1717.jpg' class='img-thumbnail' alt='Litten' width='128' height='128' /> ";
  	echo "</div></div>";
 }
+else
+{
+	echo "<div class='parent'>";
+	echo "<img src='https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg' alt='Nanalan' class='container' width= '1270' height='300'>";
+	echo "<div class='inner'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png' class='img-thumbnail' alt='Smiley face' width='128' height='128'/>";
+	echo "</div></div>";
+}
 ?>
     <br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
