@@ -235,5 +235,7 @@ function post() {
 
      document.getElementById('timeline').appendChild(div);
 }
+//try click the post button, then scroll down to the bottom
+//date and username works, still working on tweet
 
 </script>
