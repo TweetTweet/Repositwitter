@@ -2,8 +2,12 @@
 <!-- Latest compiled and minified CSS -->
 <!--making everything -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<!--navbar-->
+<!--navbar-->
 <!--navbar-->
 <html lang=''>
+
 <head>
    <meta charset='utf-8'>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,9 +33,12 @@
 </ul>
 </div>
 <br>
-<body>
+
 <br><br>
-<!--Searching-->
+
+<!--php-->
+<!--php-->
+<!--php-->
 <?php
 if (isset($_GET['search'])) {
     $searchName = $_GET["search"];
@@ -52,6 +59,7 @@ if (isset($_GET['search'])) {
         	// people can view your members-only content without logging in. 
         	die("Redirecting to login.php"); 
     	} 
+		
 		
 		// To access $_SESSION['user'] values put in an array, show user his username
 		$arr = array_values($_SESSION['user']);
@@ -131,37 +139,100 @@ if (substr($name, 0, 1) === "a")
 			
 		}
 		
+		date_default_timezone_set('Canada/Toronto');
+		$current_date = date('Y-m-d H:i:s');
 		// close connection
 		mysql_close($connection);
 		
 		// This is a comment
 
+
 	?>
     
-<div id="comment">
 
+<body>
+
+<div id="big">
+<ul id="timeline" class="timeline">
+
+	<!-- Item 1 -->
+	<li>
+		<div class="direction-r">
+			<div class="flag-wrapper">
+				<span class="flag">Freelancer</span>
+				<span class="time-wrapper"><span class="time">2013 - present</span></span>
+			</div>
+			<div class="desc">My current employment. Way better than the position before!</div>
+		</div>
+	</li>
+  
+	<!-- Item 2 -->
+	<li>
+		<div class="direction-l">
+			<div class="flag-wrapper">
+				<span class="flag">Apple Inc.</span>
+				<span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+			</div>
+			<div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
+		</div>
+	</li>
+
+	<!-- Item 3 -->
+	<li>
+		<div class="direction-r">
+			<div class="flag-wrapper">
+				<span class="flag">Harvard University</span>
+				<span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+			</div>
+			<div class="desc">A description of all the lectures and courses I have taken and my final degree?ectures and courses I have taken and my final degree?A description of all the lectures and courses I have taken and my final degree?A description of all the lectures and courses I have taken and my final degree?A description of all the lectures and courses I have taken and my final degree?A description of all the lectures and courses I have taken and my final degree?A description of all the lectures and courses I have taken and my final degree?A description of all the lectures and courses I have taken and my final degree?A description of all the lectures and courses I have taken and my final degree?A description of all the lectures and courses I have taken and my final degree?A description of all the lectures and courses I have taken and my final degree?</div>
+		</div>
+	</li>
+
+	<li>
+		<div class="direction-l">
+			<div class="flag-wrapper">
+				<span class="flag">Harvard University</span>
+				<span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+			</div>
+			<div class="desc">A description of all the lectures and courses I have taken and my final degree?A description of all the lectures and courses I have taken and my final degree?A description of all the lectures and courses I have taken and my final degree?A description of all the l</div>
+		</div>
+	</li>
+</ul>
+</div>
+
+<!-- post -->
 <div class="wrapper">
 <div class="commentBoxfloat">
   <form id="cmnt">
     <fieldset>
       <div class="form_grp">
         <label>What's on your mind?</label>
-        <textarea id="userCmnt" placeholder="Write your comment here. You can Edit and Delete options. Just Hover in Your comment, you see the both buttons"></textarea>        
+        <textarea id="userCmnt" placeholder="Hmm..."></textarea>        
       </div>
       <div class="form_grp">
-      <button type="button" id="commentsub">Submit</button>
       </div>
     </fieldset>
   </form>  
 </div>
-  <div id="cmntContr"></div>
-  
-  
- </div>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-        <script src="index.js"></script>
-   
 </div>
-	</body>
+
+
+<button id="postbtn" onclick="post()">Post</button>
+</body>
 </html>
+
+<script>
+
+function post() {
+    var div = document.createElement('div');
+    var userCmnt = $('#userCmnt').val();
+    var name = "<?php echo $name ?>";
+    var current_date = "<?php echo $current_date ?>";
+
+
+    div.innerHTML = '<li> <div class="direction-r"> <div class="flag-wrapper"> <span class="flag">' + name + '</span>\ <span class="time-wrapper"> <span class="time">' + current_date + '</span></span>\ </div>\ <div class="desc">tryhard</div>\ </div>\ </li>';
+
+     document.getElementById('timeline').appendChild(div);
+}
+
+</script>
