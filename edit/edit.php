@@ -145,6 +145,7 @@ if (substr($name, 0, 1) === "a")
 		mysql_close($connection);
 		
 		// This is a comment
+		//thanks ray 
 
 
 	?>
